@@ -20,7 +20,7 @@ jobs:
     steps:
       - checkout
       - run:
-          wget -o carve.zip https://github.com/borkdude/carve/releases/download/v0.0.1/carve-0.0.1-linux-amd64.zip && unzip carve.zip && chmod +x carve && sudo mv carve /usr/local/bin/
+          wget -O carve.zip https://github.com/borkdude/carve/releases/download/v0.0.1/carve-0.0.1-linux-amd64.zip && unzip carve.zip && chmod +x carve && sudo mv carve /usr/local/bin/
 
       # check for dead code
       - run: carve
