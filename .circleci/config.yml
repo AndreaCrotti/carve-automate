@@ -1,23 +1,15 @@
-# Clojure CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-clojure/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/clojure:lein-2.7.1
+      - image: circleci/clojure:lein-2.9.3
 
     working_directory: ~/carve-automate
 
-    environment:
-      LEIN_ROOT: "true"
-      # Customize the JVM maximum heap limit
-      JVM_OPTS: -Xmx3200m
-
     steps:
       - checkout
+      # install carve from binary
       - run:
           wget -O carve.zip https://github.com/borkdude/carve/releases/download/v0.0.1/carve-0.0.1-linux-amd64.zip && unzip carve.zip && chmod +x carve && sudo mv carve /usr/local/bin/
 
