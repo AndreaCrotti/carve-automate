@@ -11,3 +11,7 @@
 (defn -main [& args]
   (fact 2)
   (println "hello from main"))
+
+(comment
+  (defn i-do-not-count [x]
+    (println "Carve won't care about me")))

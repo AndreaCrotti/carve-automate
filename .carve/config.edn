@@ -1,1 +1,3 @@
-{:paths ["src"] :report {:format :text}}
+{:paths ["src"],
+ :report {:format :text},
+ :clj-kondo/config {:skip-comments true}}
